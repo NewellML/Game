@@ -22,7 +22,7 @@ Over o;
    
   }
  void playerDraw() { 
-  fill(0, 255, 255); 
+  fill(74, 226, 87); 
   rect(xpos, ypos, 20, 20);
 }
  
@@ -32,11 +32,11 @@ void playerMove() {
   if (holdLeft) { 
     ypos += speed;
   } 
-  if(ypos<25){
+  if(ypos<10){
     ypos=-200000000;
     o.display();
   }
-  if(ypos>475){
+  if(ypos>465){
     ypos=1000000;
     o.display();
   }
@@ -52,7 +52,31 @@ void playerMove() {
     ypos=100000000;
     o.display();
   }
- 
+  if(xpos+20>b.x4&&xpos<b.x4+1200&&ypos+20>b.y4&&ypos<b.y4+20){
+    ypos=100000000;
+    o.display();
+  }
+  if(xpos+20>b.x5&&xpos<b.x5+100&&ypos+20>b.y5&&ypos<b.y5+50){
+    ypos=100000000;
+    o.display();
+  }
+  
+ if(xpos+20>b.x6&&xpos<b.x6+100&&ypos+20>b.y6&&ypos<b.y6+50){
+    ypos=100000000;
+    o.display();
+  }
+  if(xpos+20>b.x8&&xpos<b.x8+100&&ypos+20>b.y8&&ypos<b.y8+50){
+    ypos=100000000;
+    o.display();
+  }
+  if(xpos+20>b.x7&&xpos<b.x7+100&&ypos+20>b.y7&&ypos<b.y7+50){
+    ypos=100000000;
+    o.display();
+  }
+  if(xpos+20>b.x9&&xpos<b.x9+100&&ypos+20>b.y9&&ypos<b.y9+50){
+    ypos=100000000;
+    o.display();
+  }
   if(ypos==500)
     ypos=500;
    
