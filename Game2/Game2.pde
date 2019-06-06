@@ -16,8 +16,12 @@ Rect r;
 linez l;
 Over o;
 PImage img;
+start sb;
+boolean page=false;
   void setup(){
     size(700,500);
+    sb=new start();
+   
     for(int x = 0; x<recta.length; x++ ){
       recta[x] = new Rect();
       lines[x]=new linez();
@@ -27,10 +31,20 @@ PImage img;
     r=new Rect();
     l=new linez();
     o=new Over();
+   
     
   }
+  
   void draw(){
+    if(page==false){
+      sb.display();
+    }
+    if(holdLeft){
+      page=true;
+    }
+    if(page==true){
     background(150,150,200);
+  
     
     fill(0);
     rect(0,475,700,700);
@@ -38,7 +52,8 @@ PImage img;
     playerDraw();
     playerMove();
     rects();
-   
+    }
+    
   }
   void rects(){
     
